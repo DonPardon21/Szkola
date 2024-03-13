@@ -1,0 +1,29 @@
+﻿/* Styles for buttons */
+Button {
+    background-color: purple;
+    color: white;
+    margin: 5;
+    padding: 10;
+    border-radius: 5;
+    font-size: 15;
+}
+
+/* Styles for text fields */
+Entry {
+    background-color: #1d1d1d;
+    margin-top: 30;
+    margin-bottom: 30;
+    width: 400;
+    height: 50;
+    padding: 10;
+    border-radius: 5;
+    color:white;
+}
+label{
+    font-size:20;
+}
+
+^Shell {
+    -maui-shell-title: white;
+    -maui-shell-background: purple;
+}

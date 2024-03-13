@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LosowanieOU.Views.StronaGlowna"
+             xmlns:local="clr-namespace:LosowanieOU.Views"
+            Title="System losowania osoby do odpowiedzi">
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/style.css" />
+    </ContentPage.Resources>
+    <StackLayout>
+        <ListView x:Name="peopleListView" ItemSelected="peopleListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding}"  />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Entry x:Name="txtName" Placeholder="Imię i nazwisko"/>
+        <Button Text="Dodaj osobę" Clicked="AddPerson_Clicked"/>
+        <Button Text="Losuj osobę" Clicked="PickRandomPerson_Clicked"/>
+    </StackLayout>
+</ContentPage>
